@@ -1,5 +1,7 @@
+import { pages } from '~/data/content'
+
 type SiteTree = string[]
 
-export default eventHandler((event): SiteTree => {
-  return ['/', '/hotels', '/hotels/cologne', '/hotels/berlin'];
-});
+export default eventHandler((): SiteTree => {
+  return pages.map(page => page.route)
+})
