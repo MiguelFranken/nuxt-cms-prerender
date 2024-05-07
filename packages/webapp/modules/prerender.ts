@@ -4,10 +4,15 @@ export default defineNuxtModule({
   meta: {
     name: 'prerender'
   },
-  setup (_, nuxt) {
+  async setup (_, nuxt) {
+    const response = await fetch('http://localhost:4000/sitetree') // returns an array
+    const sitetree: string[] = await response.json()
+
     nuxt.hook('prerender:routes', async ({ routes }) => {
-      console.log("Adding /hotels/berlin to prerender routes...")
-      routes.add('/hotels/berlin')
+      sitetree.forEach((slug: string) => {
+        console.log(`Adding ${slug} to prerender routes...`)
+        routes.add(slug)
+      })
     })
   }
 })
