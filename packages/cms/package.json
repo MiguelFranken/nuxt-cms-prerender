@@ -1,5 +1,5 @@
 {
-  "name": "cms",
+  "name": "@one/cms",
   "private": true,
   "scripts": {
     "build": "nitro build",
@@ -8,6 +8,7 @@
     "preview": "PORT=4000 node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@one/types": "workspace:^",
     "nitropack": "latest"
   }
 }

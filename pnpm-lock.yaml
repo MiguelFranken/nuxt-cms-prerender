@@ -20,9 +20,14 @@ importers:
 
   packages/cms:
     devDependencies:
+      '@one/types':
+        specifier: workspace:^
+        version: link:../types
       nitropack:
         specifier: latest
         version: 2.9.6(@opentelemetry/api@1.8.0)
+
+  packages/types: {}
 
   packages/webapp:
     dependencies:
@@ -36,6 +41,9 @@ importers:
         specifier: ^4.3.0
         version: 4.3.2(vue@3.4.27)
     devDependencies:
+      '@one/types':
+        specifier: workspace:^
+        version: link:../types
       ofetch:
         specifier: ^1.3.4
         version: 1.3.4

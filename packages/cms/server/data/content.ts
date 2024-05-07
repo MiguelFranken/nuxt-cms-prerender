@@ -1,15 +1,4 @@
-export interface PageContent {
-  title: string
-  body: string
-
-}
-
-export interface Page {
-  route: string
-  content: PageContent
-}
-
-type Pages = Page[]
+import type { Pages } from '@one/types'
 
 export const pages: Pages = [
   {

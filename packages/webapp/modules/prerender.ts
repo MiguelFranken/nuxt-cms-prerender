@@ -1,11 +1,10 @@
 import { defineNuxtModule } from 'nuxt/kit'
-import { ofetch } from "ofetch";
-
-type SiteTree = string[]
+import { ofetch } from 'ofetch'
+import type { SiteTree } from '@one/types'
 
 export default defineNuxtModule({
   meta: {
-    name: 'prerender'
+    name: 'prerender',
   },
   hooks: {
     'prerender:routes': async ({ routes }) => {
@@ -15,6 +14,6 @@ export default defineNuxtModule({
         console.log(`Adding ${slug} to prerender routes...`)
         routes.add(slug)
       })
-    }
-  }
+    },
+  },
 })

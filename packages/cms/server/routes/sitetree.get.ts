@@ -1,6 +1,5 @@
+import type { SiteTree } from '@one/types'
 import { pages } from '~/data/content'
-
-type SiteTree = string[]
 
 export default eventHandler((): SiteTree => {
   console.log('Serving site tree')
