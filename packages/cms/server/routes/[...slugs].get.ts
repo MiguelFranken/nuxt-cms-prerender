@@ -12,5 +12,7 @@ export default defineEventHandler((event) => {
     })
   }
 
+  console.log(`Serving page: ${page.route}`)
+
   return page.content
 })
