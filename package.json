@@ -7,6 +7,7 @@
   "keywords": [],
   "scripts": {
     "build": "turbo build",
+    "preview": "turbo preview",
     "dev": "turbo dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
