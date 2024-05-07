@@ -6,11 +6,13 @@
   "license": "ISC",
   "keywords": [],
   "scripts": {
+    "dev": "turbo dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.2",
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.0",
+    "turbo": "^1.13.3"
   }
 }
