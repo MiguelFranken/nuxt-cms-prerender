@@ -1,4 +1,5 @@
-import { type Page, pages } from '~/data/content'
+import { pages } from '~/data/content'
+import { Page } from "@one/types";
 
 export default defineEventHandler((event) => {
   const name = `/${getRouterParam(event, 'slugs')}`
