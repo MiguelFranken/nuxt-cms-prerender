@@ -1,5 +1,5 @@
+import type { Page } from '@one/types'
 import { pages } from '~/data/content'
-import { Page } from "@one/types";
 
 export default defineEventHandler((event) => {
   const name = `/${getRouterParam(event, 'slugs')}`
@@ -12,8 +12,6 @@ export default defineEventHandler((event) => {
       message: 'Page not found',
     })
   }
-
-  console.log(`Serving page: ${page.route}`)
 
   return page.content
 })

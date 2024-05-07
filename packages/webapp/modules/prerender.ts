@@ -11,7 +11,6 @@ export default defineNuxtModule({
       const sitetree = await ofetch<SiteTree>('http://localhost:4000/sitetree')
 
       sitetree.forEach((slug: string) => {
-        console.log(`Adding ${slug} to prerender routes...`)
         routes.add(slug)
       })
     },

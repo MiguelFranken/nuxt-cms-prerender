@@ -5,6 +5,14 @@ const slugs = Array.isArray(_slugs) ? _slugs : [_slugs]
 const path = slugs.join('/')
 
 const { data, error } = await useFetch(`http://localhost:4000/${path}`)
+
+const currentRandomNumber = ref(0)
+
+onMounted(() => {
+  setInterval(async () => {
+    currentRandomNumber.value = await $fetch<number>(`http://localhost:4000/api/random`)
+  }, 1500)
+})
 </script>
 
 <template>
@@ -14,6 +22,9 @@ const { data, error } = await useFetch(`http://localhost:4000/${path}`)
 
   <h2>Other interactive components:</h2>
   <Counter />
+
+  <h2>Fetching when component is mounted:</h2>
+  <p>Random number: {{ currentRandomNumber }}</p>
 
   <template v-if="error">
     <h2>Error:</h2>
