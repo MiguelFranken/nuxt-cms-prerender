@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.turbo" />
       <excludeFolder url="file://$MODULE_DIR$/packages/cms/.nitro" />
       <excludeFolder url="file://$MODULE_DIR$/packages/cms/.output" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/webapp/.output" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
