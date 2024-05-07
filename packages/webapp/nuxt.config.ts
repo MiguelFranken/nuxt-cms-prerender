@@ -4,9 +4,4 @@ export default defineNuxtConfig({
   routeRules: {
     '/hotels/cologne': { prerender: true },
   },
-  hooks: {
-    'prerender:routes': async ({ routes }) => {
-      routes.add('/hotels/berlin')
-    }
-  }
 })
